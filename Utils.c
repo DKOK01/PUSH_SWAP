@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   Utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 11:06:51 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/02/26 11:16:02 by aysadeq          ###   ########.fr       */
+/*   Created: 2025/02/26 15:12:29 by aysadeq           #+#    #+#             */
+/*   Updated: 2025/02/26 15:54:37 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "Push_Swap.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-# in
-typedef struct s_node
+void	print_error_and_exit(void)
 {
-	int				value;
-	struct s_node	*next;
-}	t_node;
+	write(2, "Error\n", 6);
+	exit(1);
+}
 
-#endif
+void	print_stack(t_node *stack)
+{
+	while (stack)
+	{
+		printf("%d\n", stack->value);
+		stack = stack->next;
+	}
+}
