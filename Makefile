@@ -1,7 +1,9 @@
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
-SRC		= Push_Swap.c Input_Handling.c Utils.c
+SRC		= Push_Swap.c Input_Handling.c Utils.c Swap_Operations.c \
+		Push_Operations.c Rotate_Operations.c Reverse_Rotate_Operations.c
+
 OBJ		= $(SRC:.c=.o)
 
 BONUS_SRC	=
