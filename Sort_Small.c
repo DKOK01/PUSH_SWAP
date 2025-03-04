@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 15:11:56 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/02 16:58:41 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/04 20:51:32 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	sort_two(t_node **stack_a)
 
 void	sort_three(t_node **stack_a)
 {
-	int first;
-	int second;
-	int third;
+	int	first;
+	int	second;
+	int	third;
 
 	first = (*stack_a)->value;
 	second = (*stack_a)->next->value;
@@ -47,7 +47,7 @@ void	sort_three(t_node **stack_a)
 
 void	sort_four_or_five(t_node **stack_a, t_node **stack_b, int size)
 {
-	int min_index;
+	int	min_index;
 
 	while (size > 3)
 	{
@@ -61,11 +61,11 @@ void	sort_four_or_five(t_node **stack_a, t_node **stack_b, int size)
 		pa(stack_a, stack_b);
 }
 
-int find_min_index(t_node *stack)
+int	find_min_index(t_node *stack)
 {
-	int min;
-	int index;
-	int i;
+	int	min;
+	int	index;
+	int	i;
 
 	min = stack->value;
 	index = 0;
@@ -83,9 +83,9 @@ int find_min_index(t_node *stack)
 	return (index);
 }
 
-void move_to_top(t_node **stack_a, int index)
+void	move_to_top(t_node **stack_a, int index)
 {
-	int size;
+	int	size;
 
 	size = stack_size(*stack_a);
 	if (index <= size / 2)
@@ -99,4 +99,3 @@ void move_to_top(t_node **stack_a, int index)
 			rra(stack_a);
 	}
 }
-
