@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:06:51 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/02/27 14:04:51 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/02 17:10:41 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_node
 
 void	print_error_and_exit(void);
 void	print_stack(t_node *stack);
+int		stack_size(t_node *stack);
 
 t_node	*parse_input(int ac, char **av);
 
@@ -46,5 +47,11 @@ void	reverse_rotate(t_node **stack);
 void	rra(t_node **stack_a);
 void	rrb(t_node **stack_b);
 void	rrr(t_node **stack_a, t_node **stack_b);
+
+void	sort_two(t_node **stack_a);
+void	sort_three(t_node **stack_a);
+void	sort_four_or_five(t_node **stack_a, t_node **stack_b, int size);
+int		find_min_index(t_node *stack);
+void	move_to_top(t_node **stack, int min_index);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 15:12:29 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/02/27 14:26:46 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/02 17:00:33 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,17 @@ void	print_stack(t_node *stack)
 		printf("|    [%d]    |\n", stack->value);
 		stack = stack->next;
 	}
+}
+
+int	stack_size(t_node *stack)
+{
+	int size;
+
+	size = 0;
+	while (stack)
+	{
+		size++;
+		stack = stack->next;
+	}
+	return (size);
 }
