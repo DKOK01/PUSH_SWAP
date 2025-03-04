@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:06:51 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/02 17:10:41 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/04 16:39:01 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,7 @@ void	sort_three(t_node **stack_a);
 void	sort_four_or_five(t_node **stack_a, t_node **stack_b, int size);
 int		find_min_index(t_node *stack);
 void	move_to_top(t_node **stack, int min_index);
+
+void	radix_sort(t_node **stack_a, t_node **stack_b, int size);
 
 #endif

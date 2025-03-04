@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 15:17:35 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/02/26 16:00:12 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/04 18:10:13 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,20 @@
 t_node	*add_to_stack(t_node *head, int num)
 {
 	t_node	*new_node;
+	t_node	*temp;
 
 	new_node = malloc(sizeof(t_node));
 	if (!new_node)
 		return (NULL);
 	new_node->value = num;
-	new_node->next = head;
-	return (new_node);
+	new_node->next = NULL;
+	if (!head)
+		return (new_node);
+	temp = head;
+	while (temp->next)
+		temp = temp->next;
+	temp->next = new_node;
+	return (head);
 }
 
 int	is_valid_input(char *str)
