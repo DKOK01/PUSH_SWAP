@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:06:51 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/04 16:39:01 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/08 23:15:03 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,29 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <limits.h>
 
 typedef struct s_node
 {
 	int				value;
+	int				index;
 	struct s_node	*next;
 }		t_node;
+
+typedef struct s_range
+{
+	int	*sorted_array;
+	int	offset;
+	int	size;
+	int	start;
+	int	end;
+}				t_range;
 
 void	print_error_and_exit(void);
 void	print_stack(t_node *stack);
 int		stack_size(t_node *stack);
+void	free_stack(t_node **stack);
+int		is_sorted(t_node *stack);
 
 t_node	*parse_input(int ac, char **av);
 
@@ -54,6 +67,7 @@ void	sort_four_or_five(t_node **stack_a, t_node **stack_b, int size);
 int		find_min_index(t_node *stack);
 void	move_to_top(t_node **stack, int min_index);
 
-void	radix_sort(t_node **stack_a, t_node **stack_b, int size);
+void	large_sort(t_node **a, t_node **b, int size);
+
 
 #endif
