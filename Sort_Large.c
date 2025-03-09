@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 17:03:59 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/08 23:14:25 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/09 16:43:02 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	next_chunk(t_range *range)
 		range->end += 1;
 }
 
-void push_in_range(t_node **a, t_node **b, t_range *range)
+void	push_in_range(t_node **a, t_node **b, t_range *range)
 {
 	if (!a || !b || !range)
 		return ;
@@ -44,16 +44,16 @@ void push_in_range(t_node **a, t_node **b, t_range *range)
 	}
 }
 
-void push_element_to_b(t_node **a, t_node **b, t_range *range)
+void	push_element_to_b(t_node **a, t_node **b, t_range *range)
 {
 	if (!a || !b || !range)
 		return ;
 	push_in_range(a, b, range);
 }
 
-int find_max_value(t_node *stack)
+int	find_max_value(t_node *stack)
 {
-	int max_value;
+	int	max_value;
 
 	max_value = stack->value;
 	while (stack)
@@ -65,9 +65,9 @@ int find_max_value(t_node *stack)
 	return (max_value);
 }
 
-int get_position(t_node *stack, int max_value)
+int	get_position(t_node *stack, int max_value)
 {
-	int position;
+	int	position;
 
 	position = 0;
 	while (stack)
@@ -80,7 +80,7 @@ int get_position(t_node *stack, int max_value)
 	return (position);
 }
 
-void push_elements_to_a(t_node **a, t_node **b)
+void	push_elements_to_a(t_node **a, t_node **b)
 {
 	int	max_value;
 	int	pos;
@@ -108,6 +108,7 @@ void push_elements_to_a(t_node **a, t_node **b)
 			ra(a);
 	}
 }
+
 int	*stack_to_array(t_node *stack, int size)
 {
 	int	*array;

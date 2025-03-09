@@ -6,11 +6,11 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 12:57:14 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/02/27 13:42:23 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/08 23:29:28 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Push_Swap.h"
+#include "../Push_Swap.h"
 
 void	push(t_node **src, t_node **dst)
 {

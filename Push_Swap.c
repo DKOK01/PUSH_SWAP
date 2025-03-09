@@ -6,17 +6,15 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:17:04 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/08 23:12:49 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/09 16:40:24 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Push_Swap.h"
 
-
 void	push_swap(t_node **stack_a, t_node **stack_b)
 {
 	int	size;
-
 
 	size = stack_size(*stack_a);
 	if (is_sorted(*stack_a))
