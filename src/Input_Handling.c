@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 15:17:35 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/04 18:10:13 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/09 21:42:43 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,20 +102,46 @@ t_node	*parse_input(int ac, char **av)
 	int		num;
 	int		valid;
 	int		i;
+	int		j;
+	char	**split_args;
 
 	stack_a = NULL;
 	i = 1;
 	while (i < ac)
 	{
-		if (!is_valid_input(av[i]))
-			print_error_and_exit();
-		valid = 1;
-		num = ft_atoi(av[i], &valid);
-		if (!valid)
-			print_error_and_exit();
-		stack_a = add_to_stack(stack_a, num);
+		if (ft_strchr(av[i], ' '))
+		{
+			split_args = ft_split(av[i], ' ');
+			if (!split_args)
+				print_error_and_exit();
+			j = 0;
+			while (split_args[j])
+			{
+				if (!is_valid_input(split_args[j]))
+					print_error_and_exit();
+				valid = 1;
+				num = ft_atoi(split_args[j], &valid);
+				if (!valid)
+					print_error_and_exit();
+				stack_a = add_to_stack(stack_a, num);
+				free(split_args[j]);
+				j++;
+			}
+			free(split_args);
+		}
+		else
+		{
+			if (!is_valid_input(av[i]))
+				print_error_and_exit();
+			valid = 1;
+			num = ft_atoi(av[i], &valid);
+			if (!valid)
+				print_error_and_exit();
+			stack_a = add_to_stack(stack_a, num);
+		}
 		i++;
 	}
+
 	if (has_dublicate(stack_a))
 		print_error_and_exit();
 	return (stack_a);

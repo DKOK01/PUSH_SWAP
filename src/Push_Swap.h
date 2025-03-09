@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:06:51 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/09 17:38:11 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/09 21:37:10 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ void	free_stack(t_node **stack);
 int		is_sorted(t_node *stack);
 
 t_node	*parse_input(int ac, char **av);
+char	**ft_split(const char *s, char c);
+char	*ft_strchr(const char *s, int c);
 
 void	swap(t_node **stack);
 void	sa(t_node **stack_a);
