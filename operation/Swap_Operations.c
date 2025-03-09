@@ -6,11 +6,11 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 08:48:03 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/08 23:30:04 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/09 16:50:57 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Push_Swap.h"
+#include "../src/Push_Swap.h"
 
 void	swap(t_node **stack)
 {

@@ -6,11 +6,11 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 15:11:56 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/04 20:51:32 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/09 16:48:29 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Push_Swap.h"
+#include "../src/Push_Swap.h"
 
 void	sort_two(t_node **stack_a)
 {

@@ -6,11 +6,11 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 17:03:59 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/09 16:43:02 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/09 16:48:06 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Push_Swap.h"
+#include "../src/Push_Swap.h"
 
 void	next_chunk(t_range *range)
 {

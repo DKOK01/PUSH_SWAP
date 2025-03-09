@@ -6,11 +6,11 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 13:26:19 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/08 23:30:00 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/09 16:50:52 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Push_Swap.h"
+#include "../src/Push_Swap.h"
 
 void	rotate(t_node **stack)
 {

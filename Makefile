@@ -1,7 +1,8 @@
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
-SRC		= $(shell ls ./*.c) \
+SRC		= $(shell ls ./src/*.c) \
+		  $(shell ls ./sort/*.c) \
 		  $(shell ls ./operation/*.c)
 OBJ		= $(SRC:.c=.o)
 
