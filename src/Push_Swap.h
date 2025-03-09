@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:06:51 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/09 16:40:49 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/09 17:38:11 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,7 @@ int		find_min_index(t_node *stack);
 void	move_to_top(t_node **stack, int min_index);
 
 void	large_sort(t_node **a, t_node **b, int size);
+void	push_elements_to_a(t_node **a, t_node **b);
+void	push_element_to_b(t_node **a, t_node **b, t_range *range);
 
 #endif
