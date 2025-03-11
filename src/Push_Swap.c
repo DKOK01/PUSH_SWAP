@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:17:04 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/11 21:06:57 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/11 21:32:01 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,16 @@ int	main(int ac, char **av)
 	t_node	*stack_b;
 
 	if (ac < 2)
-		return (1);
+		return (0);
 	stack_a = parse_input(ac, av);
 	stack_b = NULL;
-	printf("---stack A---\n");
-	print_stack(stack_a);
-	printf("---stack B---\n");
-	print_stack(stack_b);
+	// printf("---stack A---\n");
+	// print_stack(stack_a);
+	// printf("---stack B---\n");
+	// print_stack(stack_b);
 	push_swap(&stack_a, &stack_b);
-	printf("---stack A---\n");
-	print_stack(stack_a);
+	// printf("---stack A---\n");
+	// print_stack(stack_a);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

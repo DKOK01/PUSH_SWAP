@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:16:54 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/11 20:52:32 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/11 21:31:45 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	main(int ac, char **av)
 	t_node	*stack_b;
 
 	if (ac < 2)
-		return (1);
+		return (0);
 	stack_a = parse_input(ac, av);
 	stack_b = NULL;
 	read_moves(&stack_a, &stack_b);

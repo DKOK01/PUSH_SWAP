@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 08:48:03 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/11 16:13:36 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/11 21:31:29 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,15 @@ void	swap(t_node **stack)
 void	sa(t_node **stack_a)
 {
 	swap(stack_a);
-	write(1, "sa\n", 3);
 }
 
 void	sb(t_node **stack_b)
 {
 	swap(stack_b);
-	write(1, "sb\n", 3);
 }
 
 void	ss(t_node **stack_a, t_node **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	write(1, "ss\n", 3);
 }
