@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 15:17:35 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/10 15:46:01 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/10 19:20:03 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,6 @@ t_node	*parse_input(int ac, char **av)
 		i++;
 	}
 	if (has_dublicate(stack_a))
-		print_error_and_exit();
+		print_error_and_exit(&stack_a);
 	return (stack_a);
 }

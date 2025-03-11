@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 21:29:01 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/09 21:34:11 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/11 14:36:28 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,18 @@ char	*word_dup(const char *s, int start, int end)
 	return (word);
 }
 
+char	**allocate_result(const char *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = (char **)malloc((word_count(s, c) + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	return (result);
+}
+
 char	**ft_split(const char *s, char c)
 {
 	char	**result;
@@ -69,13 +81,11 @@ char	**ft_split(const char *s, char c)
 	int		j;
 	int		start;
 
-	if (!s)
-		return (NULL);
-	result = (char **)malloc((word_count(s, c) + 1) * sizeof(char *));
+	result = allocate_result(s, c);
 	if (!result)
 		return (NULL);
-	i = 0;
 	j = 0;
+	i = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -84,8 +94,11 @@ char	**ft_split(const char *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > start)
+		{
 			result[j++] = word_dup(s, start, i);
+			if (!result[j - 1])
+				return (free_split(result), NULL);
+		}
 	}
-	result[j] = NULL;
-	return (result);
+	return (result[j] = NULL, result);
 }

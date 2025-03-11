@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:06:51 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/10 15:51:10 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/10 20:28:29 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_range
 	int	end;
 }				t_range;
 
-void	print_error_and_exit(void);
+void	print_error_and_exit(t_node **stack);
 void	print_stack(t_node *stack);
 int		stack_size(t_node *stack);
 void	free_stack(t_node **stack);
@@ -48,6 +48,7 @@ char	**ft_split(const char *s, char c);
 char	*ft_strchr(const char *s, int c);
 t_node	*handle_split_args(char *arg, t_node *stack);
 t_node	*handle_normal_args(char *arg, t_node *stack);
+void	free_split(char **split_args);
 
 void	swap(t_node **stack);
 void	sa(t_node **stack_a);

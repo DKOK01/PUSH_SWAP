@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:17:04 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/09 21:44:18 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/11 14:11:39 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ int	main(int ac, char **av)
 	printf("---stack A---\n");
 	print_stack(stack_a);
 	free_stack(&stack_a);
+	free_stack(&stack_b);
 	return (0);
 }
