@@ -1,5 +1,5 @@
 while true; do
-    args=$(shuf -i 1-100 -n 100 | tr '\n' ' ')
+    args=$(shuf -i 1-9999 -n 100 | tr '\n' ' ')
     i=$(./push_swap $args | wc -l)
     status=$(./push_swap $args | ./checker_linux $args)
 
