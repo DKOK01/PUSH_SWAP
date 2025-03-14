@@ -6,7 +6,7 @@
 /*   By: aysadeq <aysadeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 11:06:51 by aysadeq           #+#    #+#             */
-/*   Updated: 2025/03/10 20:28:29 by aysadeq          ###   ########.fr       */
+/*   Updated: 2025/03/12 22:03:18 by aysadeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <limits.h>
+# include <stdio.h>
 
 typedef struct s_node
 {
 	int				value;
-	int				index;
 	struct s_node	*next;
 }		t_node;
 
